@@ -1,0 +1,14 @@
+server:
+ port: 8085
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: QCBSACCOUNT
+          uri: http://saan:8081
+          predicates:
+            - Path=/api/**
+
+
+   
